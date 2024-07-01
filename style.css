@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    /* padding: 0; */
+    /* background-image: linear-gradient(135deg, red, violet); */
+    background-image: url(./Images/pexels-markusspiske-1679772.jpg);
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    padding: 10rem;
+}
+
+#tasks-container {
+    /* background-image: linear-gradient(135deg, rgba(255, 183, 183, 0.884), rgba(128, 128, 128, 0.61)); */
+    background-image: linear-gradient(35deg, rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.658));
+    box-shadow: 1rem 1rem 1rem #222;
+
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    max-width: 550px;
+    border-radius: 1rem;
+
+    padding: 1rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    gap: 10px;
+}
+
+#tasks-container h2 {
+   color: white;
+   text-shadow: 1px 1px 1px black;
+   font-size: 1.8rem;
+}
+
+#tasks-container div{
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    place-items: center;
+    gap: 10px;
+}
+
+#tasks-container button{
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 1.3rem;
+
+    background-color: orangered;
+    color: white;
+    border: none;
+    transition: 500ms;
+}
+
+/* #tasks-container button:active{ */
+    /* background-color: orangered; */
+/* } */
+
+#tasks-container button:hover{
+    background-color: rgb(233, 27, 0);
+    cursor: pointer;
+}
+
+#tasks-container #new-task-container {
+    background-color: #CCC;
+    border-radius: 1.3rem;
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    place-items: center;
+    padding-left: 1rem;
+}
+
+#tasks-container input{
+    padding: 1rem 0.5rem;
+    width: 30rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #333 ;
+    font-weight: bold;
+    /* flex: 1; */
+}
+
+ul {
+    place-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 85%;
+}
+
+ul li {
+    list-style-type: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    color: orange;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+    position: relative;
+    padding-left: 2.3rem;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-image: url(./Images/unchecked.png);
+    border: 1px solid #999;
+    /* border-bottom: 3px solid orangered; */
+    background-position: center;
+    background-size: cover;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: black;
+    font-weight: lighter;
+    text-shadow: none;
+}
+
+ul li.checked::before {
+    background-image: url(./Images/checked\ white.png);
+    border: none;
+}
+
+.delete-task-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    aspect-ratio: 1;
+
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 250ms;
+}
+
+.delete-task-button:hover {
+    transform: rotate(180deg);
+    color: orange;
+}
+
+p {
+    color: red;
+    place-self: start;
+    font-weight: bold;
+    background-color: rgba(255, 255, 149, 0.637);
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+p.hidden {
+    display: none;
+}
